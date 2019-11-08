@@ -6,6 +6,8 @@
 }
 
 
+  
+ 
 /* BOTON CLIENTES */
 .btn1 {
     
@@ -33,20 +35,37 @@
   }
 
    /* SLIDER */
-   .hola {
+   .cajaSlider {
     position: absolute;
-    background: rgba(90, 134, 149, 0.582);
-    width: 40%;
-    height: 40%;
+    background: rgba(255, 255, 255, 0.800);    
+    margin-top: 8%;
+    margin-left: 10%;
+    max-width: 430px;
+    width: 100%;    
+    height: 50%;
     /* border-radius: ; */
   }
 
-  .solicitarPrestamo {
+  .botonCajaSlider {
     position: absolute;
-    left: 70%;
+    left: 35%;
     bottom: 5%;
   }
-
+  
+  .cajaSlider2 {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.800);    
+    margin-top: 8%;
+    margin-left: 50%;
+    max-width: 430px;
+    width: 100%;    
+    height: 50%;
+    /* border-radius: ; */
+  }
+  p{
+    font-size: 20px;
+  }
+  
   /* BOTON CLIENTES */
 
     /* CARDS PRODUCTOS*/
