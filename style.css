@@ -1,0 +1,225 @@
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: #00B4DB;
+}
+
+
+/* BOTON CLIENTES */
+.btn1 {
+    
+    border-radius: 20px;
+    background-color: white;
+    
+    padding: 7px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  .clientes {
+    border-color: #91EAE4;
+    
+  }
+
+  .clientes:hover {
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(-90deg, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-90deg, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+  }
+
+   /* SLIDER */
+   .hola {
+    position: absolute;
+    background: rgba(90, 134, 149, 0.582);
+    width: 40%;
+    height: 40%;
+    /* border-radius: ; */
+  }
+
+  .solicitarPrestamo {
+    position: absolute;
+    left: 70%;
+    bottom: 5%;
+  }
+
+  /* BOTON CLIENTES */
+
+    /* CARDS PRODUCTOS*/
+
+  h3{
+    color: gray;
+  }
+
+  h5{
+    color: rgb(172, 172, 172);
+  }
+
+  .textoTerminos {
+    color: rgb(172, 172, 172);
+  }
+
+  .card-title{
+    color: #00B4DB;
+    
+  }
+
+  .card-text{
+    color: gray;
+    
+  }
+
+
+  /* BTN CONTACTO */
+ 
+.contacto {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  /* background: lightblue; */
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+ 
+
+    /* FOOTER*/
+
+
+#footerbg{
+    height: 200px;
+    background-image: linear-gradient(to right, #7F7FD5, #91EAE4);
+}
+
+
+  
+  footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+  }
+  
+  footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+  }
+  
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    
+  }
+  
+  .footer-middle {
+    padding-top: 1em;
+    color: white;
+    
+  }
+  
+  
+  /*SOCİAL İCONS*/
+  
+  /* footer social icons */
+  
+  ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+  }
+
+  .social-network a.icoTwitter:hover {
+    background-color: #007bb7;
+  }
+
+  .social-network a.icoInsta:hover {
+    background-color: #007bb7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i,
+  .social-network a.icoTwitter:hover i, 
+  .social-network a.icoInsta:hover i{
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44BCDD;
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  
+  .social-network a {
+    background-color: #F9F9F9;
+  }
+  
+  .copy{
+      font-size: 15px;
+  }
+  
+    /* FOOTER*/
