@@ -19,7 +19,9 @@
   
   
   .clientes {
+    border-style: solid;
     border-color: #91EAE4;
+    border-width: 1px;
     
   }
 
