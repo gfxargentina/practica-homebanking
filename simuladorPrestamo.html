@@ -17,7 +17,7 @@
 <body>
     <header>
         <!-- NAVBAR -->
-        <div class="container-fluid">
+        <div class="container-fluid my-3">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#"><img src="./img/LogoChapoBank.png" width="100" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -27,27 +27,26 @@
                 <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Cuentas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tarjetas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="simuladorPrestamo.html">Prestamos</a>
-                        </li>
                     </ul>
                     <div class="align-self-end">
-                        <button type="button" class="btn1 clientes" data-toggle="modal"
-                            data-target="#exampleModal">Hacete
-                            Cliente</button>
-                        <button type="button" class="btn1 clientes" data-toggle="modal"
-                            data-target="#loginModal">Ingresá a Chapo Bank</button>
-                    </div>
+                            <button type="button" class="btn1 clientes" data-toggle="modal"
+                                data-target="#exampleModal">Hacete
+                                Cliente</button>
+                            <button type="button" class="btn1 clientes">Ingresá a Chapo Bank</button>
+                        </div>
                 </div>
-
+                
             </nav>
         </div>
-        <!-- Modal Registro -->
+        <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -59,7 +58,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="agregarForm">
+                        <form>
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp"
@@ -72,22 +71,7 @@
                             <div class="form-group">
                                 <label for="dni">D.N.I:</label>
                                 <input type="text" class="form-control" id="dni"
-                                    placeholder="Escriba su numero de Documento" onblur="buscar()">
-                            </div>
-                            <div class="form-group">
-                                <label for="contrasena">Contraseña:</label>
-                                <input type="text" class="form-control" id="contrasena"
-                                    placeholder="Escriba su Contraseña">
-                            </div>
-                            <div class="form-group">
-                                <label for="contrasena">Producto:</label>
-                                <select class="custom-select">
-                                    <option selected>Elija su producto</option>
-                                    <option value="1" id="tarjetaCredito">Tarjeta de Credito</option>
-                                    <option value="2" id="cuenta">Cuenta</option>
-                                    <option value="3" id="prestamos">Prestamos</option>
-                                </select>
-
+                                    placeholder="Escriba su numero de Documento">
                             </div>
                             <div class="form-group">
                                 <label for="dni">Dirección:</label>
@@ -116,42 +100,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary" onclick="agregar()">Registrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Login -->
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Ingreso de Cliente</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="usuarioDni">Dni:</label>
-                                <input type="text" class="form-control" id="nombreLogin" aria-describedby="nombreHelp"
-                                    placeholder="Escriba su DNI">
-                            </div>
-                            <div class="form-group">
-                                <label for="passUsuario">contraseña:</label>
-                                <input type="text" class="form-control" id="passUsuario"
-                                    placeholder="Escriba su Contraseña">
-                            </div>
-
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary" onclick="loguear()">Registrar</button>
+                        <button type="button" class="btn btn-primary">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -162,29 +111,19 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="10000">
-                    <img src="./img/Slider_02.jpg" class="d-block w-100" alt="...">
+                    <img src="./img/p3.jpg" class="d-block w-100" alt="imagen">
                     <div class="card-img-overlay cajaSlider">
-                        <h2 class="card-title">REFERI AMIGOS Y VIAJA</h2>
-                        <p>Referi a tus amigos, conocidos o familiares que aun no sean clientes y gana millas para
-                            viajar por el mundo</p>
-                        <button class="btn1 clientes botonCajaSlider">Conocé más</button>
+                        <h2 class="card-title">PRESTAMOS PERSONALES</h2>
+                        <p>¿Querés saber cuánto vas a pagar?</p>
+                        <p>Simulá el valor de tu cuota, elegí en cuantas lo queres pagar y usalo para lo que quieras.</p>
+                        <button class="btn1 clientes solicitarPrestamo">SIMULAR PRESTAMO</button>
                     </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img src="./img/Slider_03.jpg" class="d-block w-100" alt="...">
-                    <div class="card-img-overlay cajaSlider2">
-                        <h2 class="card-title">EL SEGURO MAS COMPLETO PARA TU AUTO</h2>
-                        <p>En chapo Bank podes elegir la cobertura de seguro mas completa para vos</p>
-                        <button class="btn1 clientes botonCajaSlider">Conocé más</button>
-                    </div>
+                    <img src="./img/p2.webp" class="d-block w-100" alt="imagen">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/Slider_01.jpg" class="d-block w-100" alt="...">
-                    <div class="card-img-overlay cajaSlider">
-                        <h2 class="card-title">HACÉ CRECER TUS AHORROS</h2>
-                        <p>Podes invertir desde $1000 a un plazo fijo minimo de 30 dias</p>
-                        <button class="btn1 clientes botonCajaSlider">Conocé más</button>
-                    </div>
+                    <img src="./img/p4.jpg" class="d-block w-100" alt="imagen">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -200,50 +139,77 @@
 
     </section>
     <!-- TEXTO -->
-    <section class="py-3">
-        <h3 class="text-center">Con Chapo Bank vas a poder hacer lo que quieras</h3>
-    </section>
+    <!-- <section class="py-3 my-5">
+        <h3 class="text-center"><b>INFORMACION</b></h3>
+    </section> -->
     <!-- CARDS -->
-    <section class="">
+    <section class="my-5">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./img/operaciones.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Realiza todas tus operaciones online</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn1 clientes">Mas información</button>
-                        </div>
-                    </div>
+                    <h5>Términos y condiciones</h5>
+                    <p class="textoTerminos">Datos personales
+                        Los datos personales aquí incluidos tienen el carácter de declaración jurada y son recogidos
+                        para ser incorporados y tratados en una base de datos, la cual se encuentra registrada en la
+                        Agencia de Acceso a la Información Pública, cuyo destinatario y titular es el BBVA Banco Francés
+                        S.A. Cualquier falseamiento, error y/o inexactitud respecto a la información implicará la
+                        supresión de estos datos de la base de referencia y no podrán ser utilizados a futuro.
+                        El usuario presta su consentimiento expreso al BBVA, para que toda la información referente a su
+                        persona, sus actividades económicas o las operaciones que haya concertado o que concierte en el
+                        futuro (en adelante y en su conjunto "la información") pueda ser transferida y cedida, aun en
+                        forma gratuita, dentro de estrictas políticas de confidencialidad y seguridad de los datos, a
+                        sus afiliadas, subsidiarias, controlantes, controladas y/o cualquier tercero. La información
+                        podrá ser utilizada para: a) La realización de segmentaciones o perfiles del Cliente, con fines
+                        comerciales a efectos de adaptar los productos o servicios a necesidades o características
+                        específicas, así como con fines de análisis de riesgos para evaluar nuevas operaciones, en ambos
+                        supuestos conservando dichas segmentaciones o perfiles en tanto y en cuanto el interviniente
+                        mantenga relación contractual con el BBVA, pudiendo oponerse en cualquier momento a dicho
+                        tratamiento; b) El envío a través de cualquier medio, por parte del BBVA de otros terceros, de
+                        ofertas comerciales, distintos tipos de informaciones o publicidades, personalizadas o no, sobre
+                        productos o servicios propios o de terceros; c) Para cualquier otra finalidad no incompatible
+                        con las especificadas anteriormente. Cuando así lo disponga, el usuario tendrá el derecho de
+                        acceder a la información y solicitar su rectificación o supresión de la base de archivo.
+                        El BBVA informa al usuario que sus datos personales podrán ser cedidos a las autoridades
+                        competentes cuando las leyes o regulaciones de aplicación así lo establezcan.
+                        En función del Estándar de la Organización para la Cooperación y Desarrollo Económicos (OCDE)
+                        para el Intercambio Automático de Información en Asuntos Fiscales y de las disposiciones de la
+                        Ley de cumplimiento fiscal de cuentas extranjeras (“Foreign Account Tax Compliance Act” - FATCA)
+                        de los Estados Unidos de América, el cliente autoriza al Banco a ceder información a autoridades
+                        de terceros países por operatorias desarrolladas en los mercados internacionales tales como
+                        Estados Unidos. Lo expuesto, ya sea de forma agregada o individual, según el caso.
+                        El titular de los datos personales tiene el derecho de acceso a los mismos en forma gratuita en
+                        intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto
+                        conforme lo establecido en el artículo 14, inciso 3 de la Ley 25.326.
+                        La AGENCIA DE ACCESO A LA INFORMACIÓN PUBLICA, Órgano de Control de la Ley Nº 25.326, tiene la
+                        atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento
+                        de las normas sobre protección de datos personales.</p>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./img/sacarTarjeta.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Saca online tu Tarjeta de Credito</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn1 clientes">Solicitar</button>
+                <!-- <div class="col">
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" id="" placeholder="Cuanto necesitas?">
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./img/Prestaindex.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Prestamos Personales para lo que quieras!</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn1 clientes"><a href="simuladorPrestamo.html">Mas
-                                    información</a></button>
+                        <button type="submit" class="btn btn-primary mb-2"><b>Calcular</b></button>
+                        <div class="input-group" id="pantalla">
+                            <div class="input-group-prepend">
+                                <span class="bg-primary text-light input-group-text">12 cuotas de</span>
+                            </div>
+                            <textarea class="form-control" aria-label="With textarea" id="resultado"></textarea>
                         </div>
-                    </div>
-                </div>
+                    </form>
+                </div> -->
+            </div>
+        </div>
 
-
+        <div class="contacto">
+            <a href="">
+                <img src="./img/chat.png" alt="imagen" width="100">
+            </a>
+        </div>
     </section>
+
+
+
     <!-- FOOTER -->
     <section class="mt-5">
         <div id="footerbg">
@@ -312,8 +278,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-    <script src="funciones.js"></script>
 </body>
 
 </html>
