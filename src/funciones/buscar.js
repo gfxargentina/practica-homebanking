@@ -1,10 +1,10 @@
-export function buscar(){
-
+export function buscar() {
+    
     let arreglo = JSON.parse (localStorage.getItem("keybank"));
     let dni1 = document.getElementById("dni").value;
     //buscar en el arreglo el dni 
 
-    nombreListaPersonas1 = arreglo.filter(function(persona){
+    let nombreListaPersonas1 = arreglo.filter(function(persona){
         return persona.dni == dni1;
     })
     

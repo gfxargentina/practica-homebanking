@@ -1,5 +1,5 @@
 export class Persona {
-    constructor(dni, nombre, apellido, direccion, telefono, email, salario, estado, contrasena) {
+    constructor(dni, nombre, apellido, direccion, telefono, email, salario, estado, contrasena, servicio) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -8,7 +8,9 @@ export class Persona {
         this.email = email;
         this.salario = salario;
         this.contrasena=contrasena;
-        this.estado = "pendiente" 
+        this.estado = "pendiente";
+        this.servicio = servicio;
+        
     }
 }
 

@@ -14,7 +14,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="body">
     <header>
         <!-- NAVBAR -->
         <div class="container-fluid">
@@ -72,7 +72,7 @@
                             <div class="form-group">
                                 <label for="dni">D.N.I:</label>
                                 <input type="text" class="form-control" id="dni"
-                                    placeholder="Escriba su numero de Documento" onblur="buscar()">
+                                    placeholder="Escriba su numero de Documento">
                             </div>
                             <div class="form-group">
                                 <label for="contrasena">Contraseña:</label>
@@ -80,12 +80,12 @@
                                     placeholder="Escriba su Contraseña">
                             </div>
                             <div class="form-group">
-                                <label for="contrasena">Producto:</label>
-                                <select class="custom-select">
+                                <label for="producto">Producto:</label>
+                                <select id="miSelect" class="custom-select">
                                     <option selected>Elija su producto</option>
-                                    <option value="1" id="tarjetaCredito">Tarjeta de Credito</option>
-                                    <option value="2" id="cuenta">Cuenta</option>
-                                    <option value="3" id="prestamos">Prestamos</option>
+                                    <option value="tarjeta" id="tarjetaCredito">Tarjeta de Credito</option>
+                                    <option value="cuenta" id="cuenta">Cuenta</option>
+                                    <option value="prestamo" id="prestamo">Prestamos</option>
                                 </select>
 
                             </div>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary" onclick="agregar()">Registrar</button>
+                        <button type="button" class="btn btn-primary" id="agregar">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary" onclick="loguear()">Registrar</button>
+                        <button type="button" class="btn btn-primary" id="login">Entrar</button>
                     </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                     </div>
                 </div>
 
-
+                
     </section>
     <!-- FOOTER -->
     <section class="mt-5">
@@ -313,7 +313,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script src="funciones.js"></script>
+    <script src="./lib/bundle.js"></script>
 </body>
 
 </html>
