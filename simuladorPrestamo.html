@@ -116,7 +116,7 @@
                         <h2 class="card-title">PRESTAMOS PERSONALES</h2>
                         <p>¿Querés saber cuánto vas a pagar?</p>
                         <p>Simulá el valor de tu cuota, elegí en cuantas lo queres pagar y usalo para lo que quieras.</p>
-                        <button class="btn1 clientes solicitarPrestamo">SIMULAR PRESTAMO</button>
+                        <button type="button" class="btn1 clientes solicitarPrestamo"  data-toggle="modal" data-target="#exampleModalP">SIMULAR PRESTAMO</button>
                     </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
@@ -135,6 +135,37 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <!-- Modal -->
+  <div class="modal fade" id="exampleModalP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">SIMULAR PRESTAMO...(Tasa 30% anual)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Monto</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                  <small id="emailHelp" class="form-text text-muted">Ingrese el monto que desea calcular sin comas ni puntos.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">12 cuotas de:</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-danger">Calcular</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     </section>
