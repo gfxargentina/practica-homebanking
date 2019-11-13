@@ -23,9 +23,9 @@ export function agregar() {
     
     var e = document.getElementById("miSelect")
     let servicio = e.options[e.selectedIndex].value;
-       
+           
     // crear el objeto persona 
-    let personaItem = new Persona(dni, nombre, apellido, direccion, telefono, email, salario, estado, contrasena, servicio);
+    let personaItem = new Persona(dni, nombre, apellido, direccion, telefono, email, salario, contrasena);
    
     // agregar el objeto persona dentro del arreglo 
     nombreListaPersonas.push(personaItem);
