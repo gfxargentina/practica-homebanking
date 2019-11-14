@@ -24,10 +24,9 @@
     
     border-radius: 20px;
     background-color: white;
-    
     padding: 5px 16px;
     font-size: 12px;
-    cursor: pointer;
+    cursor: pointer;  
   }
   
   
@@ -36,8 +35,18 @@
     border-style: solid;
     border-color: #91EAE4;
     border-width: 1px;
-    
+     
   }
+  
+  /* para anular cualquier otra regla estableciendo el atributo !important */
+  a {
+    text-decoration: none !important; 
+  }
+
+  /* para quitar el rectangulo azul de los botones cuando estan clickeados */
+  button:focus { 
+    outline:0 !important; }
+  
 
   .clientes:hover {
     background: #7F7FD5;  /* fallback for old browsers */
@@ -118,18 +127,6 @@
   right: 2%;
   /* background: lightblue; */
 }
-
-
-a:link{
-  text-decoration: none;
-  
-}
-
-a:hover {
-  color: white;
-}
-
- 
 
     /* FOOTER*/
 
