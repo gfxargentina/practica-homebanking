@@ -36,7 +36,7 @@ export function agregar() {
         document.getElementById("agregarForm").reset(); // resetea el formulario
         alert('Se agregó con éxito a nuestra base de datos. Estará pendiente de aprobación');
     }else{ 
-        alert('No se dió de alta. Ingrese por Login');
+        alert('No se dió de alta. Ingrese por Login por favor...');
         document.getElementById("agregarForm").reset(); // resetea el formulario
     }
 }
