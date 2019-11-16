@@ -1,3 +1,9 @@
+body{
+  
+
+}
+
+
 .nav-link{
     color: black;
 }
@@ -45,7 +51,7 @@
 
   /* para quitar el rectangulo azul de los botones cuando estan clickeados */
   button:focus { 
-    outline:0 !important; }
+    outline:0 !important;}
   
 
   .clientes:hover {
@@ -72,7 +78,15 @@
     left: 35%;
     bottom: 5%;
   }
+
+  .solicitarPrestamo{
+    position: absolute;
+    left: 55%;
+    bottom: 5%;
+
+  }
   
+
   .cajaSlider2 {
     position: absolute;
     background: rgba(255, 255, 255, 0.800);    
@@ -86,9 +100,23 @@
   p{
     font-size: 15px;
   }
-  
-  /* BOTON CLIENTES */
 
+  
+  /* ICONOS PAGINA CLIENTES */
+  .fa-file-contract{
+    color: #7F7FD5;
+    font-size: 1.5em;
+  }
+
+  .fa-university{
+    color: #7F7FD5;
+    font-size: 1.5em;
+  }
+
+  .fa-handshake{
+    color: #7F7FD5;
+    font-size: 1.5em;
+  }
     /* CARDS PRODUCTOS*/
 
   .card-title{
@@ -128,11 +156,19 @@
   /* background: lightblue; */
 }
 
+/* CONTENIDO EXTRA */
+.contenido1{
+  font-size: 4vw;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #86A8E7;
+}
+
     /* FOOTER*/
 
 
 #footerbg{
-    height: 200px;
+    height: 220px;
     background-image: linear-gradient(to right, #7F7FD5, #91EAE4);
 }
 
@@ -161,8 +197,10 @@
     
   }
   
-  
+
   /*SOCİAL İCONS*/
+
+  
   
   /* footer social icons */
   
@@ -313,6 +351,11 @@
       .tarjetasIndex{
         text-align: center;
       }
+
+      #footerbg{
+        height: 500px;
+        background-image: linear-gradient(to right, #7F7FD5, #91EAE4);
+    }
       
       
     }

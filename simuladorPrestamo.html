@@ -16,37 +16,47 @@
 
 <body>
     <header>
-        <!-- NAVBAR -->
-        <div class="container-fluid my-3">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#"><img src="./img/LogoChapoBank.png" width="100" alt=""></a>
-                <button class="navbar-toggler custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html"><img src="./img/LogoChapoBank.png" width="100" alt=""></a>
+                <button class="navbar-toggler custom-toggler navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-around menu" id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cuentas</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Tarjetas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Prestamos</a>
+                        </li>
+
+
                     </ul>
-                    <div class="align-self-end">
-                            <button type="button" class="btn1 clientes" data-toggle="modal"
-                                data-target="#exampleModal">Hacete
-                                Cliente</button>
-                            <button type="button" class="btn1 clientes">Ingresá a Chapo Bank</button>
-                        </div>
+
+                    <div class="botonesMenu">
+                        <button type="button" class="btn1 clientes" data-toggle="modal"
+                            data-target="#exampleModal">Hacete
+                            Cliente</button>
+                        <button type="button" class="btn1 clientes" data-toggle="modal"
+                            data-target="#loginModal">Ingresá a Chapo Bank</button>
+
+                    </div>
+
+
                 </div>
-                
-            </nav>
+
         </div>
-        <!-- Modal -->
+        </nav>
+        </div>
+
+        <!-- Modal Registro -->
+
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -58,7 +68,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="agregarForm">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp"
@@ -71,7 +81,22 @@
                             <div class="form-group">
                                 <label for="dni">D.N.I:</label>
                                 <input type="text" class="form-control" id="dni"
-                                    placeholder="Escriba su numero de Documento">
+                                    placeholder="Escriba su numero de Documento" onblur="buscar()">
+                            </div>
+                            <div class="form-group">
+                                <label for="contrasena">Contraseña:</label>
+                                <input type="text" class="form-control" id="contrasena"
+                                    placeholder="Escriba su Contraseña">
+                            </div>
+                            <div class="form-group">
+                                <label for="contrasena">Producto:</label>
+                                <select class="custom-select">
+                                    <option selected>Elija su producto</option>
+                                    <option value="1" id="tarjetaCredito">Tarjeta de Credito</option>
+                                    <option value="2" id="cuenta">Cuenta</option>
+                                    <option value="3" id="prestamos">Prestamos</option>
+                                </select>
+
                             </div>
                             <div class="form-group">
                                 <label for="dni">Dirección:</label>
@@ -99,8 +124,42 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary">Registrar</button>
+                        <button type="button" class="btn1 clientes" data-dismiss="modal">Salir</button>
+                        <button type="button" class="btn1 clientes" onclick="agregar()">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Ingreso de Cliente</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="usuarioDni">DNI:</label>
+                                <input type="text" class="form-control" id="nombreLogin" aria-describedby="nombreHelp"
+                                    placeholder="Escriba su DNI">
+                            </div>
+                            <div class="form-group">
+                                <label for="passUsuario">Contraseña:</label>
+                                <input type="text" class="form-control" id="passUsuario"
+                                    placeholder="Escriba su Contraseña">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn1 clientes" data-dismiss="modal">Salir</button>
+                        <button type="button" class="btn1 clientes" onclick="loguear()">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -110,20 +169,21 @@
     <section>
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="10000">
-                    <img src="./img/p3.jpg" class="d-block w-100" alt="imagen">
+                <div class="carousel-item active" data-interval="20000">
+                    <img src="./img/Slider_03.jpg" class="d-block w-100" alt="imagen">
                     <div class="card-img-overlay cajaSlider">
                         <h2 class="card-title">PRESTAMOS PERSONALES</h2>
                         <p>¿Querés saber cuánto vas a pagar?</p>
-                        <p>Simulá el valor de tu cuota, elegí en cuantas lo queres pagar y usalo para lo que quieras.</p>
+                        <p>Simulá el valor de tu cuota, elegí en cuantas lo queres pagar y usalo para lo que quieras.
+                        </p>
                         <button class="btn1 clientes solicitarPrestamo">SIMULAR PRESTAMO</button>
                     </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img src="./img/p2.webp" class="d-block w-100" alt="imagen">
+                    <img src="./img/Slider_02.jpg" class="d-block w-100" alt="imagen">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/p4.jpg" class="d-block w-100" alt="imagen">
+                    <img src="./img/Slider_01.jpg" class="d-block w-100" alt="imagen">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -138,11 +198,8 @@
 
 
     </section>
-    <!-- TEXTO -->
-    <!-- <section class="py-3 my-5">
-        <h3 class="text-center"><b>INFORMACION</b></h3>
-    </section> -->
-    <!-- CARDS -->
+
+    <!-- TERMINOS -->
     <section class="my-5">
         <div class="container">
             <div class="row">
@@ -184,20 +241,7 @@
                         atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento
                         de las normas sobre protección de datos personales.</p>
                 </div>
-                <!-- <div class="col">
-                    <form class="form-inline">
-                        <div class="form-group mx-sm-3 mb-2">
-                            <input type="text" class="form-control" id="" placeholder="Cuanto necesitas?">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2"><b>Calcular</b></button>
-                        <div class="input-group" id="pantalla">
-                            <div class="input-group-prepend">
-                                <span class="bg-primary text-light input-group-text">12 cuotas de</span>
-                            </div>
-                            <textarea class="form-control" aria-label="With textarea" id="resultado"></textarea>
-                        </div>
-                    </form>
-                </div> -->
+                
             </div>
         </div>
 
@@ -212,56 +256,71 @@
 
     <!-- FOOTER -->
     <section class="mt-5">
-        <div id="footerbg">
-            <footer class="mainfooter" role="contentinfo">
-                <div class="footer-middle">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <!--Column1-->
-                                <div class="footer-pad">
-                                    <h4>Soporte</h4>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#">Contactenos</a></li>
-                                        <li><a href="#">FAQs</a></li>
+            <div id="footerbg">
+                <footer class="mainfooter" role="contentinfo">
+                    <div class="footer-middle">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <!--Column1-->
+                                    <div class="footer-pad">
+                                        <h4>Soporte</h4>
+                                        <ul class="list-unstyled">
+                                            <li><a href="404.html"></a></li>
+                                            <li><a href="404.html">Contactenos</a></li>
+                                            <li><a href="404.html">FAQs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <!--Column1-->
+                                    <div class="footer-pad">
+                                            <h4>Legal</h4>
+                                            <ul class="list-unstyled">
+                                                <li><a href="404.html">Aviso Legal</a></li>
+                                                <li><a href="404.html">Aviso navegadores</a></li>
+                                                <li><a href="404.html">Web Corporativa</a></li>
+                                            </ul>
+    
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                        <div class="footer-pad">
+                                                <h4>Privacidad</h4>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="404.html">Proteccion de Datos</a></li>
+                                                    <li><a href="404.html">Defensa del consumidor</a></li>
+                                                    <li><a href="404.html">Terminos y Condiciones</a></li>
+                                                </ul>
+        
+                                        </div>
+    
+                                </div>
+                                <div class="col-md-3">
+                                    <h4>Nuestras Redes</h4>
+                                    <ul class="social-network social-circle">
+                                        <li><a href="404.html" class="icoFacebook" title="Facebook"><i
+                                                    class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="404.html" class="icoLinkedin" title="Linkedin"><i
+                                                    class="fab fa-linkedin"></i></a></li>
+                                        <li><a href="404.html" class="icoTwitter" title="Twitter"><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li><a href="404.html" class="icoInsta" title="Instagram"><i
+                                                    class="fab fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6">
-                                <!--Column1-->
-                                <div class="footer-pad">
-
+                            <div class="row">
+                                <div class="col-md-12 copy">
+                                    <p class="text-center copy">&copy; Copyright 2019 - Chapo Bank. All rights reserved.</p>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-
-                            </div>
-                            <div class="col-md-3">
-                                <h4>Nuestras Redes</h4>
-                                <ul class="social-network social-circle">
-                                    <li><a href="#" class="icoFacebook" title="Facebook"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="icoLinkedin" title="Linkedin"><i
-                                                class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#" class="icoTwitter" title="Twitter"><i
-                                                class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" class="icoInsta" title="Instagram"><i
-                                                class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 copy">
-                                <p class="text-center copy">&copy; Copyright 2019 - Chapo Bank. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </footer>
-        </div>
-
-    </section>
+                </footer>
+            </div>
+    
+        </section>
 
 
 
