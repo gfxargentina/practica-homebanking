@@ -8,16 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f2da195031.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:900i&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body id="body">
+<body>
     <header>
         <!-- NAVBAR -->
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#"><img src="./img/LogoChapoBank.png" width="100" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -46,8 +47,48 @@
                 </div>
 
             </nav>
+        </div> -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html"><img src="./img/LogoChapoBank.png" width="100" alt=""></a>
+                <button class="navbar-toggler custom-toggler navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-around menu" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="404.html">Cuentas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="404.html">Tarjetas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="simuladorPrestamo.html">Prestamos</a>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="botonesMenu">
+                        <button type="button" class="btn1 clientes" data-toggle="modal"
+                            data-target="#exampleModal">Hacete
+                            Cliente</button>
+                        <button type="button" class="btn1 clientes" data-toggle="modal"
+                            data-target="#loginModal">Ingresá a Chapo Bank</button>
+
+                    </div>
+
+
+                </div>
+
         </div>
+        </nav>
+        </div>
+
         <!-- Modal Registro -->
+
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -80,12 +121,12 @@
                                     placeholder="Escriba su Contraseña">
                             </div>
                             <div class="form-group">
-                                <label for="producto">Producto:</label>
-                                <select id="miSelect" class="custom-select">
+                                <label for="contrasena">Producto:</label>
+                                <select id='miSelect' class="custom-select">
                                     <option selected>Elija su producto</option>
                                     <option value="tarjeta" id="tarjetaCredito">Tarjeta de Credito</option>
                                     <option value="cuenta" id="cuenta">Cuenta</option>
-                                    <option value="prestamo" id="prestamo">Prestamos</option>
+                                    <option value="prestamo" id="prestamo">Prestamo</option>
                                 </select>
 
                             </div>
@@ -115,12 +156,13 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary" id="agregar">Registrar</button>
+                        <button type="button" class="btn1 clientes" data-dismiss="modal">Salir</button>
+                        <button type="button" class="btn1 clientes" id="agregar">Registrar</button>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Modal Login -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
@@ -136,22 +178,20 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label for="usuarioDni">Dni:</label>
+                                <label for="usuarioDni">DNI:</label>
                                 <input type="text" class="form-control" id="nombreLogin" aria-describedby="nombreHelp"
                                     placeholder="Escriba su DNI">
                             </div>
                             <div class="form-group">
-                                <label for="passUsuario">contraseña:</label>
+                                <label for="passUsuario">Contraseña:</label>
                                 <input type="text" class="form-control" id="passUsuario"
                                     placeholder="Escriba su Contraseña">
                             </div>
-
-
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn btn-primary" id="login">Entrar</button>
+                        <button type="button" class="btn1 clientes" data-dismiss="modal">Salir</button>
+                        <button type="button" class="btn1 clientes" onclick="loguear()">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -164,26 +204,26 @@
                 <div class="carousel-item active" data-interval="10000">
                     <img src="./img/Slider_02.jpg" class="d-block w-100" alt="...">
                     <div class="card-img-overlay cajaSlider">
-                        <h2 class="card-title">REFERI AMIGOS Y VIAJA</h2>
+                        <div class="card-title">REFERI AMIGOS Y VIAJA</div>
                         <p>Referi a tus amigos, conocidos o familiares que aun no sean clientes y gana millas para
                             viajar por el mundo</p>
-                        <button class="btn1 clientes botonCajaSlider">Conocé más</button>
+                            <a class="btn1 clientes" href="404.html" role="button">Conocé más</a>
                     </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
                     <img src="./img/Slider_03.jpg" class="d-block w-100" alt="...">
                     <div class="card-img-overlay cajaSlider2">
-                        <h2 class="card-title">EL SEGURO MAS COMPLETO PARA TU AUTO</h2>
+                        <h4 class="card-title">EL SEGURO MAS COMPLETO PARA TU AUTO</h4>
                         <p>En chapo Bank podes elegir la cobertura de seguro mas completa para vos</p>
-                        <button class="btn1 clientes botonCajaSlider">Conocé más</button>
+                        <a class="btn1 clientes" href="404.html" role="button">Conocé más</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="./img/Slider_01.jpg" class="d-block w-100" alt="...">
                     <div class="card-img-overlay cajaSlider">
-                        <h2 class="card-title">HACÉ CRECER TUS AHORROS</h2>
+                        <h4 class="card-title">HACÉ CRECER TUS AHORROS</h4>
                         <p>Podes invertir desde $1000 a un plazo fijo minimo de 30 dias</p>
-                        <button class="btn1 clientes botonCajaSlider">Conocé más</button>
+                        <a class="btn1 clientes" href="404.html" role="button">Conocé más</a>
                     </div>
                 </div>
             </div>
@@ -199,50 +239,103 @@
 
 
     </section>
+    <!-- CARDS CONTENIDO -->
+    <section class="tarjetasIndex mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col mb-3 text-center">
+                        <div class="card shadow"> 
+                            <div class="card-body">
+                                    <i class="fas fa-file-contract"></i>
+                                <h5 class="card-title">Sin sorpresas</h5>
+                                <p class="card-text">Somos transparentes, no hay letra chica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 text-center">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                    <i class="fas fa-university"></i>
+                                <h5 class="card-title">Aprobado</h5>
+                                <p class="card-text">Estamos autorizados y regulados por el Banco Central.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body text-center">
+                                    <i class="fas fa-handshake"></i>
+                                <h5 class="card-title">Sin costos</h5>
+                                <p class="card-text">Todas tus operaciones diarias están incluidas.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+        </section>
     <!-- TEXTO -->
     <section class="py-3">
-        <h3 class="text-center">Con Chapo Bank vas a poder hacer lo que quieras</h3>
+        <div class="text-center">Con Chapo Bank vas a poder hacer lo que quieras</div>
     </section>
     <!-- CARDS -->
-    <section class="">
+    <section class="tarjetasIndex">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
+                <div class="col mb-3">
+                    <div class="card shadow">
                         <img class="card-img-top" src="./img/operaciones.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Realiza todas tus operaciones online</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn1 clientes">Mas información</button>
+                            <h5 class="card-title">Todas tus operaciones online</h5>
+                            <p class="card-text">Tus tranferencias en el mejor banco digital de Argentina</p>
+                            <a class="btn1 clientes" href="404.html" role="button">Mas información</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
+                <div class="col mb-3">
+                    <div class="card shadow">
                         <img class="card-img-top" src="./img/sacarTarjeta.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Saca online tu Tarjeta de Credito</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn1 clientes">Solicitar</button>
+                            <p class="card-text">Tarjeta ChapoBank oro solo para narcotraficantes selectos
+                                <br></p>
+                            <a class="btn1 clientes" href="404.html" role="button">solicitar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card shadow">
                         <img class="card-img-top" src="./img/Prestaindex.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Prestamos Personales para lo que quieras!</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn1 clientes"><a href="simuladorPrestamo.html">Mas
-                                    información</a></button>
+                            <p class="card-text">La tasa mas baja del mercado, te ayudamos a lavar tu
+                                dinero</p>
+                            <a class="btn1 clientes" href="simuladorPrestamo.html" role="button">Mas información</a>
                         </div>
                     </div>
                 </div>
+                <!-- CONTENIDO -->
+                <section class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                                <img class="img-fluid" src="./img/mobile-1.png" class="img-fluid" alt="">
 
-                
+                        </div>
+                        <div class="col-sm-6">
+                                <div class="contenido1">
+                                    <br>
+                                        Tu Banco Digital.
+                                        Ahorrá tiempo y manejá el
+                                        banco estés donde estés.                                    
+
+                                </div>
+                              
+                            </div>
+
+                    </div>
+
+                </section>
+
+
     </section>
     <!-- FOOTER -->
     <section class="mt-5">
@@ -256,31 +349,46 @@
                                 <div class="footer-pad">
                                     <h4>Soporte</h4>
                                     <ul class="list-unstyled">
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#">Contactenos</a></li>
-                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="404.html"></a></li>
+                                        <li><a href="404.html">Contactenos</a></li>
+                                        <li><a href="404.html">FAQs</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
                                 <!--Column1-->
                                 <div class="footer-pad">
+                                        <h4>Legal</h4>
+                                        <ul class="list-unstyled">
+                                            <li><a href="404.html">Aviso Legal</a></li>
+                                            <li><a href="404.html">Aviso navegadores</a></li>
+                                            <li><a href="404.html">Web Corporativa</a></li>
+                                        </ul>
 
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
+                                    <div class="footer-pad">
+                                            <h4>Privacidad</h4>
+                                            <ul class="list-unstyled">
+                                                <li><a href="404.html">Proteccion de Datos</a></li>
+                                                <li><a href="404.html">Defensa del consumidor</a></li>
+                                                <li><a href="404.html">Terminos y Condiciones</a></li>
+                                            </ul>
+    
+                                    </div>
 
                             </div>
                             <div class="col-md-3">
                                 <h4>Nuestras Redes</h4>
                                 <ul class="social-network social-circle">
-                                    <li><a href="#" class="icoFacebook" title="Facebook"><i
+                                    <li><a href="404.html" class="icoFacebook" title="Facebook"><i
                                                 class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="icoLinkedin" title="Linkedin"><i
+                                    <li><a href="404.html" class="icoLinkedin" title="Linkedin"><i
                                                 class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#" class="icoTwitter" title="Twitter"><i
+                                    <li><a href="404.html" class="icoTwitter" title="Twitter"><i
                                                 class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" class="icoInsta" title="Instagram"><i
+                                    <li><a href="404.html" class="icoInsta" title="Instagram"><i
                                                 class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
@@ -297,10 +405,6 @@
 
     </section>
 
-
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -313,7 +417,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script src="./lib/bundle.js"></script>
+    <script src="/lib/bundle.js"></script>
 </body>
 
 </html>
