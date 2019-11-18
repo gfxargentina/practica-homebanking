@@ -55,6 +55,7 @@ export function agregar() {
         localStorage.setItem("keybank", JSON.stringify(nombreListaPersonas));
         document.getElementById("agregarForm").reset(); // resetea el formulario
         alert('Se agregó con éxito a nuestra base de datos. Estará pendiente de aprobación');
+        
         window.location.href = "index.html";
         
     }else{ 
