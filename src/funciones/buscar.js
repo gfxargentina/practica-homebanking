@@ -3,8 +3,6 @@ export function buscar() {
     let arreglo = JSON.parse(localStorage.getItem("keybank"));
     //crea un array con los datos del localstorage
 
-    alert('en buscar')
-
     let dni1 = document.getElementById("dni").value;
     //trae el número de DNI que ingresó el usuario
 

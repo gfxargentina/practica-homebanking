@@ -1,3 +1,9 @@
+body{
+  
+
+}
+
+
 .nav-link{
     color: black;
 }
@@ -5,27 +11,48 @@
     color: #00B4DB;
 }
 
-
-  
+.menu{
+  margin-left: 20%;
+}
+.botonesMenu{
+  margin-left: 19%;
+}
+  /* boton hamburguesa */
+  .custom-toggler.navbar-toggler {
+    border-color: rgb(0, 0, 0);
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
  
 /* BOTON CLIENTES */
 .btn1 {
     
     border-radius: 20px;
     background-color: white;
-    
-    padding: 7px 16px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 5px 16px;
+    font-size: 12px;
+    cursor: pointer;  
   }
+  
   
   
   .clientes {
     border-style: solid;
     border-color: #91EAE4;
     border-width: 1px;
-    
+     
   }
+  
+  /* para anular cualquier otra regla estableciendo el atributo !important */
+  a {
+    text-decoration: none !important; 
+  }
+
+  /* para quitar el rectangulo azul de los botones cuando estan clickeados */
+  button:focus { 
+    outline:0 !important;}
+  
 
   .clientes:hover {
     background: #7F7FD5;  /* fallback for old browsers */
@@ -51,7 +78,15 @@
     left: 35%;
     bottom: 5%;
   }
+
+  .solicitarPrestamo{
+    position: absolute;
+    left: 55%;
+    bottom: 5%;
+
+  }
   
+
   .cajaSlider2 {
     position: absolute;
     background: rgba(255, 255, 255, 0.800);    
@@ -63,15 +98,34 @@
     /* border-radius: ; */
   }
   p{
-    font-size: 20px;
+    font-size: 15px;
   }
-  
-  /* BOTON CLIENTES */
 
+  
+  /* ICONOS PAGINA CLIENTES */
+  .fa-file-contract{
+    color: #7F7FD5;
+    font-size: 1.5em;
+  }
+
+  .fa-university{
+    color: #7F7FD5;
+    font-size: 1.5em;
+  }
+
+  .fa-handshake{
+    color: #7F7FD5;
+    font-size: 1.5em;
+  }
     /* CARDS PRODUCTOS*/
 
-  h3{
+  .card-title{
+    font-size: 2vw;
+  }
+
+  .text-center{
     color: gray;
+    font-size: 5vh;
   }
 
   h5{
@@ -102,22 +156,19 @@
   /* background: lightblue; */
 }
 
-a:link {
-  color: black;
-  text-decoration: none;
+/* CONTENIDO EXTRA */
+.contenido1{
+  font-size: 4vw;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #86A8E7;
 }
-
-a:hover {
-  color: white;
-}
-
- 
 
     /* FOOTER*/
 
 
 #footerbg{
-    height: 200px;
+    height: 220px;
     background-image: linear-gradient(to right, #7F7FD5, #91EAE4);
 }
 
@@ -146,8 +197,10 @@ a:hover {
     
   }
   
-  
+
   /*SOCİAL İCONS*/
+
+  
   
   /* footer social icons */
   
@@ -244,3 +297,65 @@ a:hover {
   }
   
     /* FOOTER*/
+
+    /* MEDIA QUERYS */
+    @media only screen and (max-width: 768px) {
+      /* Para Celulares */
+      
+      .cajaSlider {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.800);    
+        margin-top: 1%;
+        margin-left: 10%;
+        max-width: 230px;
+        width: 100%;    
+        height: 80%;
+        /* border-radius: ; */
+      }
+      p{
+        font-size: 1vh;
+      }
+      .cajaSlider2 {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.800);    
+        margin-top: 8%;
+        margin-left: 4%;
+        max-width: 430px;
+        width: 100%;    
+        height: 50%;
+        /* border-radius: ; */
+      }
+      .btn1 {
+    
+        border-radius: 20px;
+        background-color: white;
+        padding: 5px 16px;
+        font-size: 6px;
+        cursor: pointer;
+      }
+      
+      .botonCajaSlider {
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+      }
+      .botonCajaSlider2 {
+        position: absolute;
+        left: 55%;
+        bottom: -25%;
+      }
+
+      .text-center{
+        font-size: 2vh;
+      }
+      .tarjetasIndex{
+        text-align: center;
+      }
+
+      #footerbg{
+        height: 500px;
+        background-image: linear-gradient(to right, #7F7FD5, #91EAE4);
+    }
+      
+      
+    }

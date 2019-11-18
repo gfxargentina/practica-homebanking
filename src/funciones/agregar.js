@@ -55,9 +55,11 @@ export function agregar() {
         localStorage.setItem("keybank", JSON.stringify(nombreListaPersonas));
         document.getElementById("agregarForm").reset(); // resetea el formulario
         alert('Se agregó con éxito a nuestra base de datos. Estará pendiente de aprobación');
+        window.location.href = "index.html";
         
     }else{ 
         alert('No se dió de alta. Ingrese por Login por favor...');
         document.getElementById("agregarForm").reset(); // resetea el formulario
+        window.location.href = "index.html";
     }
 }

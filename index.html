@@ -157,7 +157,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn1 clientes" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn1 clientes" id="agregar">Registrar</button>
+                        <button type="submit" class="btn1 clientes" id="agregar">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn1 clientes" data-dismiss="modal">Salir</button>
-                        <button type="button" class="btn1 clientes" onclick="loguear()">Registrar</button>
+                        <button type="button" class="btn1 clientes" id="login">Ingresar</button>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                         <div class="card-title">REFERI AMIGOS Y VIAJA</div>
                         <p>Referi a tus amigos, conocidos o familiares que aun no sean clientes y gana millas para
                             viajar por el mundo</p>
-                            <a class="btn1 clientes" href="404.html" role="button">Conocé más</a>
+                        <a class="btn1 clientes" href="404.html" role="button">Conocé más</a>
                     </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
@@ -241,38 +241,38 @@
     </section>
     <!-- CARDS CONTENIDO -->
     <section class="tarjetasIndex mt-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col mb-3 text-center">
-                        <div class="card shadow"> 
-                            <div class="card-body">
-                                    <i class="fas fa-file-contract"></i>
-                                <h5 class="card-title">Sin sorpresas</h5>
-                                <p class="card-text">Somos transparentes, no hay letra chica.</p>
-                            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col mb-3 text-center">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <i class="fas fa-file-contract"></i>
+                            <h5 class="card-title">Sin sorpresas</h5>
+                            <p class="card-text">Somos transparentes, no hay letra chica.</p>
                         </div>
                     </div>
-                    <div class="col mb-3 text-center">
-                        <div class="card shadow">
-                            <div class="card-body">
-                                    <i class="fas fa-university"></i>
-                                <h5 class="card-title">Aprobado</h5>
-                                <p class="card-text">Estamos autorizados y regulados por el Banco Central.</p>
-                            </div>
+                </div>
+                <div class="col mb-3 text-center">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <i class="fas fa-university"></i>
+                            <h5 class="card-title">Aprobado</h5>
+                            <p class="card-text">Estamos autorizados y regulados por el Banco Central.</p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow">
-                            <div class="card-body text-center">
-                                    <i class="fas fa-handshake"></i>
-                                <h5 class="card-title">Sin costos</h5>
-                                <p class="card-text">Todas tus operaciones diarias están incluidas.</p>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <i class="fas fa-handshake"></i>
+                            <h5 class="card-title">Sin costos</h5>
+                            <p class="card-text">Todas tus operaciones diarias están incluidas.</p>
                         </div>
                     </div>
-    
-    
-        </section>
+                </div>
+
+
+    </section>
     <!-- TEXTO -->
     <section class="py-3">
         <div class="text-center">Con Chapo Bank vas a poder hacer lo que quieras</div>
@@ -298,7 +298,9 @@
                             <h5 class="card-title">Saca online tu Tarjeta de Credito</h5>
                             <p class="card-text">Tarjeta ChapoBank oro solo para narcotraficantes selectos
                                 <br></p>
-                            <a class="btn1 clientes" href="404.html" role="button">solicitar</a>
+                            <!--<a class="btn1 clientes" href="#loginModal" role="button">solicitar</a>-->
+                            <button type="button" class="btn1 clientes" data-toggle="modal"
+                                data-target="#loginModal">Solicitar</button>
                         </div>
                     </div>
                 </div>
@@ -309,7 +311,8 @@
                             <h5 class="card-title">Prestamos Personales para lo que quieras!</h5>
                             <p class="card-text">La tasa mas baja del mercado, te ayudamos a lavar tu
                                 dinero</p>
-                            <a class="btn1 clientes" href="simuladorPrestamo.html" role="button">Mas información</a>
+                            <button type="button" class="btn1 clientes" data-toggle="modal"
+                                data-target="#loginModal">Solicitar</button>
                         </div>
                     </div>
                 </div>
@@ -317,19 +320,19 @@
                 <section class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                                <img class="img-fluid" src="./img/mobile-1.png" class="img-fluid" alt="">
+                            <img class="img-fluid" src="./img/mobile-1.png" class="img-fluid" alt="">
 
                         </div>
                         <div class="col-sm-6">
-                                <div class="contenido1">
-                                    <br>
-                                        Tu Banco Digital.
-                                        Ahorrá tiempo y manejá el
-                                        banco estés donde estés.                                    
+                            <div class="contenido1">
+                                <br>
+                                Tu Banco Digital.
+                                Ahorrá tiempo y manejá el
+                                banco estés donde estés.
 
-                                </div>
-                              
                             </div>
+
+                        </div>
 
                     </div>
 
@@ -358,25 +361,25 @@
                             <div class="col-md-3 col-sm-6">
                                 <!--Column1-->
                                 <div class="footer-pad">
-                                        <h4>Legal</h4>
-                                        <ul class="list-unstyled">
-                                            <li><a href="404.html">Aviso Legal</a></li>
-                                            <li><a href="404.html">Aviso navegadores</a></li>
-                                            <li><a href="404.html">Web Corporativa</a></li>
-                                        </ul>
+                                    <h4>Legal</h4>
+                                    <ul class="list-unstyled">
+                                        <li><a href="404.html">Aviso Legal</a></li>
+                                        <li><a href="404.html">Aviso navegadores</a></li>
+                                        <li><a href="404.html">Web Corporativa</a></li>
+                                    </ul>
 
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
-                                    <div class="footer-pad">
-                                            <h4>Privacidad</h4>
-                                            <ul class="list-unstyled">
-                                                <li><a href="404.html">Proteccion de Datos</a></li>
-                                                <li><a href="404.html">Defensa del consumidor</a></li>
-                                                <li><a href="404.html">Terminos y Condiciones</a></li>
-                                            </ul>
-    
-                                    </div>
+                                <div class="footer-pad">
+                                    <h4>Privacidad</h4>
+                                    <ul class="list-unstyled">
+                                        <li><a href="404.html">Proteccion de Datos</a></li>
+                                        <li><a href="404.html">Defensa del consumidor</a></li>
+                                        <li><a href="404.html">Terminos y Condiciones</a></li>
+                                    </ul>
+
+                                </div>
 
                             </div>
                             <div class="col-md-3">
