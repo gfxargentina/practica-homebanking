@@ -15,12 +15,19 @@ export function loguear() { //el onclick del boton agregar
         })
 
         if (nombreListaPersonas1.length > 0) {
-            //alert(usuarios[0].estado);
-            if (nombreListaPersonas1[0].estado == 'pendiente') {
+            
+            if (nombreListaPersonas1[0].cuenta == '1') {
                 alert('Ud ya es usuario pero aún no fue aprobado como Cliente... por favor intente nuevamente mas tarde... disculpe las molestias...')
                 window.location.href = "index.html"
-            } else {
+            }
+            
+            if(nombreListaPersonas1[0].cuenta == '2') {
                 window.location.href = "clientes.html"
+            }
+
+            if(nombreListaPersonas1[0].cuenta == '3'){
+                alert('Ud posee una cuenta Suspendida momentaneamente... por favor intente nuevamente mas tarde... disculpe las molestias...')
+                window.location.href = "index.html"
             }
 
         } else {

@@ -8,10 +8,9 @@ export class Persona {
         this.email = email;
         this.salario = salario;
         this.contrasena=contrasena;
-        this.estado = "pendiente";
-        this.cuenta = true;
-        this.tarjeta = false;
-        this.prestamo = false;
+        this.cuenta = "1";
+        this.tarjeta = "0";
+        this.prestamo = "0";
         
     }
 }
