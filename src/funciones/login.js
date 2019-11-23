@@ -32,7 +32,7 @@ export function loguear() { //el onclick del boton agregar
 
         } else {
             alert('Por favor, primero debería registrarse...');
-            window.location.href = "index.html";
+            window.location = "index.html";
         }
     }
 
