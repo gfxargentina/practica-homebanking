@@ -18,7 +18,7 @@ export function loguear() { //el onclick del boton agregar
             
             if (nombreListaPersonas1[0].cuenta == '1') {
                 alert('Ud ya es usuario pero aún no fue aprobado como Cliente... por favor intente nuevamente mas tarde... disculpe las molestias...')
-                window.location.href = "index.html"
+                $('#loginModal').modal('hide');
             }
             
             if(nombreListaPersonas1[0].cuenta == '2') {
@@ -27,12 +27,13 @@ export function loguear() { //el onclick del boton agregar
 
             if(nombreListaPersonas1[0].cuenta == '3'){
                 alert('Ud posee una cuenta Suspendida momentaneamente... por favor intente nuevamente mas tarde... disculpe las molestias...')
-                window.location.href = "index.html"
+                $('#loginModal').modal('hide');
             }
 
         } else {
             alert('Por favor, primero debería registrarse...');
-            window.location = "index.html";
+            $('#loginModal').modal('hide');
+            $('#exampleModal').modal('show');
         }
     }
 

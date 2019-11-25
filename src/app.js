@@ -7,3 +7,5 @@ document.getElementById('agregar').addEventListener('click', agregar);
 document.getElementById('dni').addEventListener('blur', buscar);
 document.getElementById('login').addEventListener('click',loguear);
 document.getElementById('calcular').addEventListener('click',calcular);
+
+
